@@ -1,7 +1,11 @@
-let walk;
-function preload(){
-  
-  walk = loadImage('walk.png')
+let walkk = [];
+let currentFrame = 0;
+
+function preload() {
+  for (let i = 0; i < 10; i++) {
+    let fileName = 'walkk' + i + '.png'; // Update the path
+    walkk[i] = loadImage(fileName);
+  }
 }
 
 function setup() {
@@ -10,6 +14,9 @@ function setup() {
 
 function draw() {
   background(220);
-  
-  image(walk,0,0);
+  image(walkk[currentFrame], 0, 0);
+  currentFrame++;
+  if (currentFrame >= walkk.length) {
+    currentFrame = 0;
+  }
 }
