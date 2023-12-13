@@ -10,6 +10,8 @@ function preload() {
 
 function setup() {
   createCanvas(400, 400);
+    frameRate(10); // Set the frame rate to 10 frames per second (adjust as needed)
+
 }
 
 function draw() {
